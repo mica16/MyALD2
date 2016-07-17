@@ -1,5 +1,6 @@
 'use strict';
 
+require('es6-promise').polyfill();
 import gulp     from 'gulp';
 import webpack  from 'webpack';
 import path     from 'path';
@@ -31,7 +32,7 @@ let resolveToComponents = (glob = '') => {
 // map of all paths
 let paths = {
   js: resolveToComponents('**/*!(.spec.js).js'), // exclude spec files
-  styl: resolveToApp('**/*.styl'), // stylesheets
+  scss: resolveToApp('**/*.scss'), // stylesheets
   html: [
     resolveToApp('**/*.html'),
     path.join(root, 'index.html')
@@ -70,7 +71,7 @@ gulp.task('serve', () => {
   config.entry.app = [
     // this modules required to make HRM working
     // it responsible for all this webpack magic
-    'webpack-hot-middleware/client?reload=true',
+    'webpack-hot-middleware/client?reload=true'
     // application entry point
   ].concat(paths.entry);
 

@@ -5,3 +5,15 @@ node_modules
 .settings
 *.log
 dist/
+typings/
+www
+coverage
+**/.idea/workspace.xml
+platforms
+plugins
+**/.sass-cache
+**/.sass-cache/*
+*.apk
+.idea
+.idea/*.xml
+.idea/jsLibraryMappings.xml
