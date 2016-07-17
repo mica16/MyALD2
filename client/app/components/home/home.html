@@ -4,6 +4,13 @@
     </button>
   </ion-nav-buttons>
   <ion-content>
-    <div style="text-align:center"><i class="ion ion-ios-people"></i> Home page</div>
+    <div style="text-align:center;background-color: lightgreen"><i class="ion ion-ios-people"></i> Home page</div>
+    <ion-list>
+      <ion-item collection-repeat="n in home.generateNumbersList() track by $index"
+                item-width="'100%'"
+                item-height="69" class="text-center">
+        <span>{{$index+1}}</span>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
