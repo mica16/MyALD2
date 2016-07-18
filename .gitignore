@@ -17,3 +17,5 @@ plugins
 .idea
 .idea/*.xml
 .idea/jsLibraryMappings.xml
+client/app/**/*.js
+client/app/**/*.js.map

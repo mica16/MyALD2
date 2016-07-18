@@ -28,7 +28,7 @@ let resolveToComponents = (glob = '') => {
 
 // map of all paths
 let paths = {
-  js: resolveToComponents('**/*!(.spec.js).js'), // exclude spec files
+  ts: resolveToComponents('**/*!(.spec.js).ts'), // exclude spec files
   scss: resolveToApp('**/*.scss'), // stylesheets
   html: [
     resolveToApp('**/*.html'),
@@ -36,7 +36,7 @@ let paths = {
   ],
   entry: [
     'babel-polyfill',
-    path.join(__dirname, root, 'app/app.js')
+    path.join(__dirname, root, 'app/app.ts')
   ],
   output: root,
   blankTemplates: path.join(__dirname, 'generator', 'component/**/*.**'),

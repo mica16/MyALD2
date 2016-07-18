@@ -16,5 +16,6 @@ export default ($stateProvider:ng.ui.IStateProvider) => {
                     controller: 'HomeController'
                 }
             }
+            
         });
 }

@@ -1,9 +1,8 @@
-import Sidemenu from './sidemenu/sidemenu';
-
-let commonModule = angular.module('app.common', [
-  Sidemenu
-])
-
-.name;
-
-export default commonModule;
+"use strict";
+require('ionic-angular/release/js/ionic.bundle');
+var sidemenu_1 = require('./sidemenu/sidemenu');
+exports.__esModule = true;
+exports["default"] = angular.module('app.common', [
+    sidemenu_1["default"]
+]).name;
+//# sourceMappingURL=common.js.map
