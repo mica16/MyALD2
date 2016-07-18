@@ -13,7 +13,7 @@ export default ($stateProvider:ng.ui.IStateProvider) => {
                 'menuContent': {
                     template: require('./home.html'),
                     controllerAs: 'home',
-                    controller: 'HomeController'       
+                    controller: 'HomeController'
                 }
             }
         });
