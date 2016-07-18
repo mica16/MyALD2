@@ -28,11 +28,18 @@ module.exports = function (config) {
 
     webpack: {
       devtool: 'inline-source-map',
+      resolve: {
+        extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
+      },
       module: {
         loaders: [
-          { test: /\.js/, exclude: [/app\/lib/, /node_modules/], loader: 'babel' },
+          {
+            test: /\.ts$/,
+            loader: 'ng-annotate!babel!ts-loader'
+          },
+          {test: /\.js$/, exclude: [/app\/lib/, /node_modules/], loader: 'ng-annotate!babel'},
           { test: /\.html/, loader: 'raw' },
-          { test: /\.styl$/, loader: 'style!css!stylus' },
+          { test: /\.scss$/, loader: 'style!css!sass' },
           { test: /\.css$/, loader: 'style!css' }
         ]
       }

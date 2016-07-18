@@ -1,9 +1,11 @@
 import HomeModule from './home'
+import SidemenuModule from '../../common/sidemenu/sidemenu'
 
 describe('Home', () => {
   let $rootScope, $state, $location, $componentController, $compile;
 
   beforeEach(window.module(HomeModule));
+  beforeEach(window.module(SidemenuModule));
 
   beforeEach(inject(($injector) => {
     $rootScope = $injector.get('$rootScope');
@@ -16,9 +18,9 @@ describe('Home', () => {
   describe('Module', () => {
     // top-level specs: i.e., routes, injection, naming
     it('default component should be home', () => {
-      $location.url('/');
+      $state.go('sidemenu.home');
       $rootScope.$digest();
-      expect($state.current.component).to.eq('home');
+      expect($state.current.name).to.eq('sidemenu.home');
     });
   });
 

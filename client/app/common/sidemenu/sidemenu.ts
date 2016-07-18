@@ -1,6 +1,7 @@
 /// <reference path="../../../../typings/globals/angular/index.d.ts" />
 import config from './sidemenu.config'
 import sidemenuController from './sidemenu.controller';
+import 'ionic-angular/release/js/ionic.bundle';
 
 export default angular.module('sidemenu', [
     'ui.router'
