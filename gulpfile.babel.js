@@ -40,7 +40,7 @@ let paths = {
   ],
   output: root,
   blankTemplates: path.join(__dirname, 'generator', 'component/**/*.**'),
-  dest: path.join(__dirname, 'dist')
+  dest: path.join(__dirname, 'www')
 };
 
 // use webpack.config.js to build modules
