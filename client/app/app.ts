@@ -9,8 +9,7 @@ angular.module('app', [
     Common,
     Components
 ])
-    .config(($locationProvider, $stateProvider, $urlRouterProvider) => {
+    .config(($stateProvider, $urlRouterProvider) => {
         "ngInject";
         $urlRouterProvider.otherwise('/sidemenu/home');
-        $locationProvider.html5Mode(true).hashPrefix('!');
     });
