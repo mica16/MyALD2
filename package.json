@@ -74,6 +74,10 @@
   "license": "Apache-2.0",
   "cordovaPlugins": [],
   "cordovaPlatforms": [
-    "ios"
+    "ios",
+    {
+      "platform": "android",
+      "locator": "windows"
+    }
   ]
 }
