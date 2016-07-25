@@ -75,14 +75,15 @@
   },
   "author": "Michael AZERHAD",
   "license": "Apache-2.0",
-  "cordovaPlugins": [
-    "cordova-plugin-splashscreen"
-  ],
   "cordovaPlatforms": [
-    "ios",
     {
       "platform": "android",
       "locator": "windows"
-    }
+    },
+    "ios"
+  ],
+  "cordovaPlugins": [
+    "cordova-plugin-splashscreen",
+    "phonegap-plugin-push"
   ]
 }
