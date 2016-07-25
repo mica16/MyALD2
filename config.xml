@@ -8,7 +8,6 @@
         MyALD2
     </author>
     <content src="index.html"/>
-    <allow-navigation href="https://wealcome-staging.herokuapp.com/*"/>
     <access origin="geo:*" launch-external="yes" />
     <access origin="http://maps.apple.com/*" launch-external="yes" />
     <access origin="https://www.google.com/maps/*" launch-external="yes" />
