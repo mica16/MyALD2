@@ -83,7 +83,7 @@
     "ios"
   ],
   "cordovaPlugins": [
-    "cordova-plugin-splashscreen",
-    "phonegap-plugin-push"
+    "phonegap-plugin-push",
+    "cordova-plugin-splashscreen"
   ]
 }
