@@ -14,7 +14,7 @@ angular.module('app', [
 ]).config(config)
     .run(run);
 
-function run($ionicPlatform:IonicPlatformService, $timeout) {
+function run($ionicPlatform:IonicPlatformService, $timeout, $http) {
     $ionicPlatform.ready(() => {
         if (!ionic.Platform.isWebView())
             return;
@@ -28,8 +28,11 @@ function run($ionicPlatform:IonicPlatformService, $timeout) {
                 }
             });
             push.on('registration', (data) => {
-                alert("device token -> " + data.registrationId);
-                //TODO - send device token to server
+                $http.post("http://192.168.200.169:3001/registrationIds", {registrationId: data.registrationId}).then(function () {
+                    alert("This device whose registrationId is: " + data.registrationId + " is now registered!");
+                }, function (e) {
+                    alert(JSON.stringify(e));
+                });
             });
             push.on('error', (e) => {
                 alert(e.message);
